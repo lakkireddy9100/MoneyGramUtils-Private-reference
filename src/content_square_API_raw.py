@@ -9,7 +9,7 @@ from google.cloud import bigquery
 from google.cloud import storage
 import os
 
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = r"data-lake-191d246e77ad.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = r"191d246e77ad.json"
 
 bq_client = bigquery.Client()
 gcs_client= storage.Client()
@@ -132,7 +132,7 @@ def get_job_run_parts_files(id,runid):
             df2.to_csv(f"testing{counter}.csv")
             counter+=1
             # print(jsonl_data)
-        print("--------------")
+        # print("--------------")
         # with open("testing3.txt","w+") as file:
         #     file.write(res.json())
         # df1=pd.json_normalize(res.json())
@@ -152,7 +152,7 @@ if __name__ == "__main__":
     # create_export_job()
     # list_all_jobs()
     # get_ran_jobs()
-    get_job_run_files(1119)
+    # get_job_run_files(1119)
 
     
     # get_job_run_files(1120)
